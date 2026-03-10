@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurusan & Kelas | SMA IT Insantama Plus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #8b0000;
+            --secondary-gold: #d4af37;
+            --dark-text: #2c3e50;
+            --light-bg: #f8f9fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: var(--dark-text); background: var(--light-bg); line-height: 1.6; }
+
+        .top-bar { background: var(--secondary-gold); height: 5px; width: 100%; }
+
+        header { 
+            background: white; 
+            padding: 15px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .brand { display: flex; align-items: center; }
+        .brand img { height: 70px; margin-right: 15px; }
+        .brand-text h1 { font-size: 24px; color: var(--primary-red); letter-spacing: 1px; font-weight: 700; }
+
+        .wrapper { display: flex; min-height: calc(100vh - 110px); }
+
+        aside { 
+            width: 280px; 
+            background: var(--primary-red); 
+            padding: 40px 20px; 
+            color: white;
+        }
+        aside h3 { 
+            font-size: 14px; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            margin-bottom: 30px; 
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+        }
+        aside ul { list-style: none; }
+        aside ul li { margin-bottom: 15px; }
+        aside ul li a { 
+            text-decoration: none; 
+            color: rgba(255,255,255,0.8); 
+            font-weight: 500;
+            display: flex;
+            transition: 0.3s;
+        }
+        aside ul li a:hover { color: var(--secondary-gold); padding-left: 10px; }
+        aside ul li a.active { color: var(--secondary-gold); font-weight: 700; }
+
+        main { flex: 1; padding: 40px 5%; background: white; }
+        h2 { color: var(--primary-red); margin-bottom: 20px; font-size: 28px; font-weight: 700; border-left: 6px solid var(--secondary-gold); padding-left: 15px; }
+        
+        .intro-text { margin-bottom: 30px; color: #555; }
+
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            min-width: 600px;
+        }
+        th {
+            background-color: var(--primary-red);
+            color: white;
+            text-align: center;
+            padding: 18px;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            font-size: 15px;
+        }
+        tr:hover { background-color: #fff9e6; transition: 0.2s; }
+        
+        .tag-mipa {
+            background: var(--secondary-gold);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        footer { 
+            background: #1a1a1a; 
+            color: #999; 
+            text-align: center; 
+            padding: 20px; 
+            font-size: 12px; 
+            border-top: 4px solid var(--primary-red);
+        }
+
+        @media (max-width: 900px) {
+            .wrapper { flex-direction: column; }
+            aside { width: 100%; padding: 20px; }
+            aside ul { display: flex; flex-wrap: wrap; justify-content: center; }
+            aside ul li { margin: 5px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar"></div>
+
+    <header>
+        <div class="brand">
+            <img src="logo.png" alt="Logo SMA IT Insantama">
+            <div class="brand-text">
+                <h1>SMA IT INSANTAMA PLUS</h1>
+                <p>Sekolah Calon Pemimpin</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <aside>
+            <h3>Navigasi</h3>
+            <ul>
+                <li><a href="index.html"> BERANDA</a></li>
+                <li><a href="jurusan.html" class="active"> JURUSAN & KELAS</a></li>
+                <li><a href="kontak.html"> KONTAK</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2>Data Kelas & Jurusan</h2>
+            <p class="intro-text">
+                SMA IT Insantama berfokus pada keunggulan akademik di bidang Sains (MIPA). Berikut adalah daftar pembagian kelas untuk Tahun Ajaran 2026/2027:
+            </p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tingkat</th>
+                            <th>Nama Kelas</th>
+                            <th>Program</th>
+                            <th>Jumlah Siswa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td rowspan="6" style="font-weight:bold; color:var(--primary-red); background:#fdfdfd;">X (SEPULUH)</td><td>X MIPA A</td><td><span class="tag-mipa">MIPA</span></td><td>30 Siswa</td></tr>
+                        <tr><td>X MIPA B</td><td><span class="tag-mipa">MIPA</span></td><td>30 Siswa</td></tr>
+                        <tr><td>X MIPA C</td><td><span class="tag-mipa">MIPA</span></td><td>30 Siswa</td></tr>
+                        <tr><td>X MIPA D</td><td><span class="tag-mipa">MIPA</span></td><td>30 Siswa</td></tr>
+                        <tr><td>X MIPA E</td><td><span class="tag-mipa">MIPA</span></td><td>30 Siswa</td></tr>
+                        <tr><td>X MIPA F</td><td><span class="tag-mipa">MIPA</span></td><td>30 Siswa</td></tr>
+
+                        <tr><td rowspan="6" style="font-weight:bold; color:var(--primary-red); background:#fdfdfd;">XI (SEBELAS)</td><td>XI MIPA A</td><td><span class="tag-mipa">MIPA</span></td><td>28 Siswa</td></tr>
+                        <tr><td>XI MIPA B</td><td><span class="tag-mipa">MIPA</span></td><td>28 Siswa</td></tr>
+                        <tr><td>XI MIPA C</td><td><span class="tag-mipa">MIPA</span></td><td>28 Siswa</td></tr>
+                        <tr><td>XI MIPA D</td><td><span class="tag-mipa">MIPA</span></td><td>28 Siswa</td></tr>
+                        <tr><td>XI MIPA E</td><td><span class="tag-mipa">MIPA</span></td><td>28 Siswa</td></tr>
+                        <tr><td>XI MIPA F</td><td><span class="tag-mipa">MIPA</span></td><td>28 Siswa</td></tr>
+
+                        <tr><td rowspan="6" style="font-weight:bold; color:var(--primary-red); background:#fdfdfd;">XII (DUA BELAS)</td><td>XII MIPA A</td><td><span class="tag-mipa">MIPA</span></td><td>25 Siswa</td></tr>
+                        <tr><td>XII MIPA B</td><td><span class="tag-mipa">MIPA</span></td><td>25 Siswa</td></tr>
+                        <tr><td>XII MIPA C</td><td><span class="tag-mipa">MIPA</span></td><td>25 Siswa</td></tr>
+                        <tr><td>XII MIPA D</td><td><span class="tag-mipa">MIPA</span></td><td>25 Siswa</td></tr>
+                        <tr><td>XII MIPA E</td><td><span class="tag-mipa">MIPA</span></td><td>25 Siswa</td></tr>
+                        <tr><td>XII MIPA F</td><td><span class="tag-mipa">MIPA</span></td><td>25 Siswa</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2026 SMA IT INSANTAMA 
+    </footer>
+
+</body>
+</html>
